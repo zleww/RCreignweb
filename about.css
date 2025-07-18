@@ -1,0 +1,264 @@
+        body {
+          background-color: #1b1b3a;
+          background-image:
+            radial-gradient(circle at 0% 50%, hsla(221, 100%, 50%, 0.26) 0%, transparent 50%),
+            radial-gradient(circle at 80% 0%, hsla(221, 100%, 50%, 0.23) 0%, transparent 50%),
+            radial-gradient(circle at 80% 50%, hsla(0, 0%, 35%, 0.47) 0%, transparent 50%),
+            radial-gradient(circle at 0% 100%, hsla(0, 0%, 0%, 1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 100%, hsla(0, 0%, 0%, 1) 0%, transparent 50%),
+            radial-gradient(circle at 0% 0%, hsla(0, 0%, 85%, 0.4) 0%, transparent 50%),
+            radial-gradient(circle at 0% 0%, hsla(0, 0%, 38%, 0.8) 0%, transparent 50%),
+            radial-gradient(circle at 0% 0%, hsla(251, 97%, 18%, 1) 0%, transparent 50%),
+            radial-gradient(circle at 0% 0%, hsla(250, 0%, 0%, 1) 0%, transparent 50%);
+  
+          background-size: cover;
+          background-position: center;
+          background-attachment: fixed;
+          position: relative;
+          z-index: 0;
+          overflow-x: hidden;
+        }
+
+        body::before {
+          content: "";
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          background-image: url('businessmeetingbg.jpg');
+          background-size: cover;
+          background-position: center;
+          opacity: 0.08;
+          z-index: -1;
+          pointer-events: none; 
+        }
+
+        /*ABOUT SECTION*/
+        .about {
+          position: relative;
+          z-index: 1;
+          padding: 20px;
+        }
+
+        .about-container {
+          text-align: center; /* Center the header and description */
+          padding: 10px; /* Add some padding around the section */
+          padding-top: 20rem;
+          margin-bottom: 5rem;
+        }
+
+        .abouthead {
+          margin-bottom: 2rem;
+        }
+
+        .ourtext {
+          color: blue;
+        }
+
+        .abdes {
+          color: #ffffff;
+          font-size: clamp(1rem, 1.3vw, 3rem);
+          font-style: italic;
+          line-height: clamp(1.6rem, 1.8vw, 3.6rem);
+          font-family: "Quicksand", sans-serif; /* Use your preferred font */
+          font-weight: 400;
+          margin: 0 auto; /* Center the description */
+          max-width: 90%; /* Limit the width on mobile */
+        }
+
+        .abouthead, .abdes {
+          opacity: 0;
+          transform: translateY(40px);
+          transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .abouthead.fade-in, .abdes.fade-in {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        /*WHO WE ARE MEDIA QUERIES*/
+        @media only screen and (min-width: 768px) and (max-width: 1023px) { 
+          
+        }
+
+        @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+        .about-container {
+          margin-top: 1rem;
+          }
+
+        .abouthead {
+          margin-bottom: 10px;
+          text-align: left; /* Ensure text is left-aligned */
+          margin-left: 3rem;
+
+        }
+
+        .abdes {
+          margin-left: 3rem;
+          margin-top: 3rem;
+          margin-right: auto; /* Keep right margin auto for overall centering of the block */
+          max-width: 60%; /* Limit the width */
+          text-align: left; /* Ensure text is left-aligned */
+        } 
+      }
+
+        @media only screen and (min-width: 1440px) and (max-width: 40000px) {
+          .about-container {
+          margin-top: 1rem;
+          }
+
+        .abouthead {
+          margin-bottom: 20px;
+          text-align: left; /* Ensure text is left-aligned */
+          margin-left: 3rem;
+
+        }
+
+        .abdes {
+          margin-left: 3rem;
+          margin-top: 3rem;
+          margin-right: auto; /* Keep right margin auto for overall centering of the block */
+          max-width: 60%; /* Limit the width */
+          text-align: left; /* Ensure text is left-aligned */
+        } 
+        }
+
+
+      /*MISSION AND VISION SECTION*/
+.missionvision {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the children horizontally */
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center; /* Ensure all text inside is centered */
+}
+
+.mission-side,
+.vision-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content horizontally */
+  margin-bottom: 120px;
+  max-width: 800px;
+}
+
+.vision-side {
+  margin-top: 40px;
+}
+
+.mission-side,
+.vision-side {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.mission-side.fade-in,
+.vision-side.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.clienttext {
+ font-size: clamp(2.2rem, 5vw, 7rem);
+ margin-bottom: 10px;
+ color: white; 
+ font-family: "Josefin Sans", sans-serif; /* Use your preferred font */
+font-weight: bold;
+}
+
+.ourmtext,
+.ourvtext {
+  color: blue;
+  font-weight: bold;
+}
+
+.missiontext,
+.visiontext {
+  color: white;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.062), 0 0 16px rgba(255, 255, 255, 0.301);
+  font-weight: bold;
+}
+
+.mdes,
+.vdes {
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  font-style: italic;
+  font-size: clamp(1rem, 1.3vw, 3rem);
+  line-height: clamp(1.6rem, 1.8vw, 3.6rem);
+  max-width: 80%; /* Limit the width on mobile */
+  font-weight: 400;
+  margin: 0 auto; /* Center the description */
+  margin-top: 20px;
+}
+
+.omhighlight,
+.ovhighlight {
+  color: #004cff;
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(20, 20, 172, 0.8),
+               0 0 16px rgba(173, 173, 255, 0.5);
+}
+
+/*MISSION AND VISION MEDIA QUERIES*/
+@media only screen and (min-width: 768px) and (max-width: 1023px) { 
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  .mission-side,
+  .vision-side {
+    align-items: flex-start;
+    text-align: left;
+    margin-left: 3rem;
+    margin-right: auto;
+    max-width: 60%;
+  }
+
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 40000px) {
+  .mission-side,
+  .vision-side {
+    align-items: flex-start;
+    text-align: left;
+    margin-left: 3rem;
+    margin-right: auto;
+    max-width: 60%;
+  }
+
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 40000px) {
+  .missionvision {
+    margin-top: 11rem;
+    margin-bottom: 11rem;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10rem; /* Optional: spacing between Mission and Vision */
+    align-items: flex-start; /* Align tops instead of centers */
+  }
+
+  .mission-side,
+  .vision-side {
+    margin: 0;
+    max-width: 40%;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .mdes,
+  .vdes {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 3rem;
+  }
+}
+    
+
+
+        

@@ -1,0 +1,1033 @@
+
+/* === Global Background === */
+body {
+    background-color: #1b1b3a;
+    background-image:
+      radial-gradient(circle at 0% 50%,
+        hsla(221, 100%, 50%, 0.26) 0%,
+        transparent 50%),
+      radial-gradient(circle at 80% 0%,
+        hsla(221, 100%, 50%, 0.23) 0%,
+        transparent 50%),
+      radial-gradient(circle at 80% 50%,
+        hsla(0, 0%, 35%, 0.47) 0%,
+        transparent 50%),
+      radial-gradient(circle at 0% 100%,
+        hsla(0, 0%, 0%, 1) 0%,
+        transparent 50%),
+      radial-gradient(circle at 80% 100%,
+        hsla(0, 0%, 0%, 1) 0%,
+        transparent 50%),
+      radial-gradient(circle at 0% 0%,
+        hsla(0, 0%, 85%, 0.4) 0%,
+        transparent 50%),
+      radial-gradient(circle at 0% 0%,
+        hsla(0, 0%, 38%, 0.8) 0%,
+        transparent 50%),
+      radial-gradient(circle at 0% 0%,
+        hsla(251, 97%, 18%, 1) 0%,
+        transparent 50%),
+      radial-gradient(circle at 0% 0%,
+        hsla(250, 0%, 0%, 1) 0%,
+        transparent 50%);
+    background-blend-mode: normal;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+  }
+
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  #apply {
+  scroll-margin-top: 100px; /* Adjust based on your navbar height */
+}
+
+  
+
+/* main.css */
+
+/* Style for the hamburger menu (hidden by default) */
+.hamburger-menu {
+    display: none; /* Hidden by default on larger screens */
+    flex-direction: column;
+    cursor: pointer;
+     width: 30px;
+    height: 21px; /* Adjust height to fit 3 bars */
+    justify-content: space-between;
+}
+
+.hamburger-menu div {
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 3px 0;
+    transition: 0.4s; 
+}
+
+/* Container to align all three sections */
+
+header {
+    color: white;
+    position: fixed; /* Make it sticky */
+    top: 0; /* Stick it to the top of the viewport */
+    left: 0; /* Extend to the left edge */
+    width: 100%; /* Extend to the right edge */
+    z-index: 100; /* Ensure it stays on top of other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+  background-color: #000;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.15) 0%, transparent 30%),
+    radial-gradient(circle at 80% 10%, rgba(180, 180, 180, 0.12) 0%, transparent 35%),
+    radial-gradient(circle at 50% 50%, rgba(220, 220, 220, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 30% 80%, rgba(160, 160, 160, 0.1) 0%, transparent 30%),
+    radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.08) 0%, transparent 35%);
+    color: white;
+    padding: 15px 20px;
+    position: relative;
+}
+
+.logo img {
+    width: 5rem; /* Adjust logo size */
+    height: auto;
+}
+
+/* Navigation centered */
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 6rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: quicksand, sans-serif;
+    transition: color 0.3s;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a:hover {
+    color: #000dca;
+}
+
+.apply-button a { 
+    text-decoration: none; /* Remove the underline */
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: quicksand, sans-serif;
+    color: black; /* Set the font color to black */
+}
+
+.apply-button {
+    background-color: #007bff;
+    color: white; /* This will be overridden by the 'a' tag color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: quicksand, sans-serif;
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+.apply-button:hover { /* Add hover effect to the button itself */
+    background-color: #0056b3;
+}
+
+
+/* Styles for the "X" when the menu is active */
+.hamburger-menu.open .bar1 {
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.hamburger-menu.open .bar2 {
+    opacity: 0; /* Hide the middle bar */
+}
+
+.hamburger-menu.open .bar3 {
+    transform: rotate(45deg) translate(-6px, -6px);
+}
+
+
+/*mobile*/
+@media only screen and (max-width: 767px) {
+    .navbar {
+        display: none;
+    }
+
+    .apply-button {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: flex; /* Shown on mobile screens */
+    }
+
+    .header-container {
+        justify-content: space-between;
+    }
+}
+
+.mobile-nav {
+    display: none;
+    position: fixed; /* Make it sticky */
+    top: 120px; /* Adjust based on header height */
+    left: 0;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    width: 100%;
+    padding-top: 20px; /* Reduce top padding */
+    padding-bottom: 20px; /* Add bottom padding */
+    padding-left: 0; /* Remove side padding */
+    padding-right: 0; /* Remove side padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    text-align: center;
+    transition: top 5.3s ease-in-out; /* Add the transition property */
+}
+
+.mobile-nav.open {
+    top: 70px; /* Slide it down to its visible position */
+}
+
+.mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-nav li {
+    padding: 10px 0;
+}
+
+.mobile-nav a {
+    text-decoration: none;
+    color: #141414;
+    font-weight: bold;
+    display: block; /* Make links take full width for easier tapping */
+    padding: 10px 0; /* Add padding to the links themselves */
+    font-size: 1.2rem; /* Increase font size for better readability */
+    font-family: quicksand, sans-serif;
+    font-weight: 200;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.mobile-nav a:hover {
+    color: #000dca; /* Change text color on hover */
+}
+
+.mobile-nav .apply-button-mobile {
+    margin-top: 20px;
+    padding: 0 20px; /* Add some side padding for the button */
+}
+
+
+
+.mobile-nav .apply-button-mobile a {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 20px;
+    text-align: center;
+    font-family: quicksand, sans-serif;
+    font-weight: 200;
+    transition: background-color 0.3s; /* Add transition for smooth effect */
+}
+
+.mobile-nav .apply-button-mobile a:hover {
+    background-color: #0056b3; /* Darker background on hover */
+}
+
+/*tablet*/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .header-container {
+        display: flex;
+        justify-content: space-between; /* Logo left, items right */
+        align-items: center;
+    }
+
+    .navbar {
+        display: none !important; /* Hide the desktop navigation on tablets */
+    }
+
+    .apply-button {
+        display: none !important; /* Hide the apply button on tablets */
+    }
+
+    .hamburger-menu {
+        display: flex; /* Show the hamburger menu on tablets */
+    }
+
+    /* You might want to adjust the styling of the hamburger menu for tablets */
+    .hamburger-menu {
+        display: flex;
+        width: 40px; /* Make it slightly bigger for tablets */
+        height: 28px;
+        justify-content: space-between;
+    }
+
+    .hamburger-menu div {
+        height: 4px; /* Make the bars thicker */
+    }
+
+    .hamburger-menu.open .bar1 {
+        transform: rotate(-45deg) translate(-8px, 8px); /* Adjust translate for larger size */
+    }
+
+    .hamburger-menu.open .bar3 {
+        transform: rotate(45deg) translate(-8px, -8px); /* Adjust translate for larger size */
+    }
+
+    .mobile-nav {
+        top: 113px; /* Adjust top position if header height is different on tablets */
+    }
+}
+
+/*laptop*/
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+
+    .navbar a {
+        font-size: 1.2rem;
+    }
+
+    .apply-button a {
+        font-size: 0.8rem; /* Adjust font size for laptop */
+    }
+      .navbar ul {
+        gap: 4rem; /* Adjust gap for laptops */
+    }
+
+        .logo img {
+        height: 90px; /* Slightly larger logo on desktop */
+        width: auto; /* Maintain aspect ratio */
+    }
+
+        .hamburger-menu {
+        display: none !important; /* Hide on laptop */
+    }
+}
+
+
+/*desktop*/
+@media only screen and (min-width: 1440px) and (max-width: 40000px) {
+    header {
+        padding: 0px; /* Adjust header padding on large desktops */
+    }
+
+    .header-container {
+        max-width: 100%; /* Limit maximum width of header content */
+        margin: 0 auto; /* Center the header content */
+    }
+
+        .navbar {
+        display: flex !important;
+        align-items: center;
+    }
+
+
+    .navbar ul {
+        gap: 8rem; /* Further adjust gap for large desktops */
+    }
+
+    .logo img {
+        height: 80px; /* Slightly larger logo on desktop */
+        width: auto; /* Maintain aspect ratio */
+    }
+
+        .apply-button {
+        /* Ensure it's visible on desktop */
+        display: block;
+    }
+
+        .hamburger-menu {
+        display: none !important; /* Hide the hamburger menu on desktop */
+    }
+}
+
+
+
+
+/* === main === */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70rem;
+  color: white;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 5s ease-out forwards;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px; /* Add some padding */
+  margin-top: -5rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.highlight {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 100;
+  font-size: clamp(3.5rem, 7vw, 9rem);
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.7); 
+}
+
+h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 100;
+  font-size: clamp(2rem, 5vw, 6rem);
+  margin: 0;
+}
+
+.subheading {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: clamp(0.8rem, 1.4vw, 2rem);
+  color: white;
+  color: white;
+  text-shadow: 0 0 8px rgba(173, 173, 255, 0.8),
+               0 0 16px rgba(173, 173, 255, 0.5);
+
+}
+
+/* Button */
+.button {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* spacing between buttons */
+  gap: clamp(1rem, 2vw, 4rem);
+  margin-top: 10px;
+}
+
+.button a {
+  margin: 5px;
+  padding: clamp(6px, 1.3vw, 15px) clamp(8px, 3vw, 25px);
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  color: white;
+  border: 1px solid #4949f8; 
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 3px;
+  transition: 0.3s;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+.button a:hover {
+  background-color: #5353ff;
+  color: black;
+  box-shadow: 0 0 10px #5353ff, 0 0 20px #5353ff, 0 0 30px #5353ff;
+}
+
+/* main media tablet to desktop */
+/* mobile */
+@media only screen and (max-width: 767px) {
+}
+
+/* tablet */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+}
+
+/*laptop*/
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+}
+
+
+
+/*our client section*/
+
+.our-clients-section {
+  padding-top: 20rem;
+
+}
+
+.our-clients-header {
+    text-align: center; /* Center the header and description */
+    padding: 10px; /* Add some padding around the section */
+    padding-top: 20px;
+    padding-bottom: 90px;
+    margin-top: -30rem;
+}
+
+
+.clienttext {
+    font-size: clamp(2rem, 5vw, 7rem);
+    margin-bottom: 10px;
+    color: white; 
+    font-family: "Josefin Sans", sans-serif; /* Use your preferred font */
+    font-weight: bold;
+}
+
+.ourtext {
+    color: blue;
+}
+
+.ocdes {
+    color: white; 
+    font-size: clamp(1rem, 1.3vw, 2.6rem);
+    font-style: italic;
+    line-height: 1.6;
+    font-family: "Quicksand", sans-serif; /* Use your preferred font */
+    font-weight: 400;
+    margin: 0 auto; /* Center the description */
+    max-width: 90%; /* Limit the width on mobile */
+    text-shadow: 0 0 8px rgba(173, 173, 255, 0.8),
+    0 0 16px rgba(173, 173, 255, 0.5); /* White glow */
+}
+
+.ocdes, .ourclienthead {
+  opacity: 0;
+  transform: translateX(-50px); /* slide from left */
+  transition: opacity 0.8s ease-out, transform 1s ease-out;
+}
+
+.ocdes.slide-in, .ourclienthead.slide-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Mobile Styles (max-width: 767px) - Refinements */
+
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+    .our-clients-header {
+    text-align: left; /* Align header content to the left */
+    padding: 90px; /* Add some padding around the section */
+    margin-top: -15rem;
+    width: 80%; /* Limit width and allow margin for spacing */
+    margin-left: -28px; /* Push to the right */
+    margin-right: auto; /* Keep centered overall */
+}
+
+.clienttext {
+    margin-bottom: 10px;
+    text-align: left; /* Ensure text is left-aligned */
+}
+
+.ourtext {
+    color: blue;
+}
+
+.ocdes {
+    margin-top: 4rem;
+    line-height: 2.2rem;
+    margin-left: 0; /* Remove auto margin to left */
+    margin-right: auto; /* Keep right margin auto for overall centering of the block */
+    max-width: 80%; /* Limit the width */
+    text-align: left; /* Ensure text is left-aligned */
+}
+
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 40000px) {
+        .our-clients-header {
+    text-align: left; /* Align header content to the left */
+    padding: 90px; /* Add some padding around the section */
+    margin-top: -15rem;
+    width: 80%; /* Limit width and allow margin for spacing */
+    margin-left: -28px; /* Push to the right */
+    margin-right: auto; /* Keep centered overall */
+}
+
+.clienttext {
+    margin-bottom: 10px;
+    text-align: left; /* Ensure text is left-aligned */
+}
+
+.ourtext {
+    color: blue;
+}
+
+.ocdes {
+    margin-top: 4rem;
+    line-height: 2.9rem;
+    margin-left: 0; /* Remove auto margin to left */
+    margin-right: auto; /* Keep right margin auto for overall centering of the block */
+    max-width: 60%; /* Limit the width */
+    text-align: left; /* Ensure text is left-aligned */
+}
+}
+
+
+/*client carousel*/
+
+.glassmorphism {
+  background: rgba(234, 234, 234, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: background 0.5s ease, box-shadow 0.5s ease, backdrop-filter 0.5s ease, -webkit-backdrop-filter 0.5s ease, border-color 0.5s ease;
+}
+
+  .category-title {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: clamp(1.5rem, 4vw, 5rem);
+    color: #dfdfdf;
+    margin-bottom: 2rem;
+  }
+
+.client-container {
+  width: clamp(80px, 90vw, 400px); /* Using 100% as the preferred value */
+
+  /* Clamp height */
+  height: clamp(50px, 70vw, 320px); /* Using 'auto' to respect content height */
+  font-size: 0.75rem;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  box-sizing: border-box;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+  .carousel-item {
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(1rem, 2vw, 3rem);
+    width: 100%;
+
+  }
+
+  .carousel-item.active {
+  display: flex;
+}
+
+
+  .client-container:hover {
+  transform: scale(1.05); /* Makes the container bigger on hover */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
+}
+
+.client-container img {
+  max-width: 70%;
+  max-height: 35%;
+  margin-bottom: 5px;
+}
+
+  .title {
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
+  color: #ffffff;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+}
+
+  .button-container {
+  color: white;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 40px;
+  }
+
+  .nav-button {
+  cursor: pointer;
+  font-size: 2rem;
+  margin-bottom: 5rem;
+  background-color: #007bff00; 
+  color: white; /* Ensure the arrow color is visible */
+  gap: 40px;
+  border: none; /* Remove default button border */
+  }
+
+  .nav-button:hover {
+  opacity: 8;
+  transform: scale(1.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* media for client carousel */
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 40000px) {
+      .carousel-container {
+    gap: 60px;
+  }
+
+    .client-container {
+    padding: 40px;
+    font-size: 1rem;
+  }
+
+    .client-container img {
+    max-width: 65%;
+    max-height: 50%;
+    margin-bottom: 10px;
+  }
+
+}
+
+
+
+
+
+
+
+
+        /* Footer Styles */
+
+footer {
+    background-color: #000;
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.15) 0%, transparent 30%),
+        radial-gradient(circle at 80% 10%, rgba(180, 180, 180, 0.12) 0%, transparent 35%),
+        radial-gradient(circle at 50% 50%, rgba(220, 220, 220, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 30% 80%, rgba(160, 160, 160, 0.1) 0%, transparent 30%),
+        radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.08) 0%, transparent 35%);
+    background-blend-mode: screen;
+    color: white;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column; /* Keep footer as a column to stack top and bottom */
+    align-items: center; /* Center the bottom section */
+    margin: 0 auto;
+    margin-top: 0 auto;
+}
+
+.footer-top {
+    display: flex; /* Keep logo and info in a row */
+    justify-content: space-around; /* Distribute space */
+    align-items: flex-start; /* Align items to the start vertically */
+    max-width: 1200px;
+    width: 90%;
+    padding: 2rem;
+    flex-wrap: wrap; /* Allow wrapping if needed */
+    gap: 2rem; /* Adjust gap between logo and info */
+}
+
+.footer-logo {
+    font-size: clamp(3rem, 5vw, 3rem);
+    padding: 20px;
+    padding-right: 2rem; /* Reduce right padding */
+    margin-left: 0; /* Remove negative margin */
+    transform: translateY(0); /* Remove vertical transform */
+    flex-shrink: 1; /* Allow logo to shrink */
+}
+
+.RCtext {
+    font-size: clamp(2.4rem, 8vw, 4.5rem);
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
+.Reigntext {
+    font-size: clamp(1.7rem, 5vw, 2.6rem);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+}
+
+.footer-info {
+    display: flex; /* Keep info sections in a row */
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-grow: 1; /* Take available space */
+    width: auto; /* Adjust width */
+    flex-wrap: wrap; /* Allow wrapping of info sections */
+    gap: 1rem; /* Adjust gap between info sections */
+}
+
+.visit,
+.connect,
+.stay-connected {
+    text-align: center;
+    flex: 1 1 auto; /* Distribute space, allow growth and shrinking */
+    width: 300px; /* Ensure a minimum width for each section */
+}
+
+.visit h4,
+.connect h4,
+.stay-connected h4 {
+    margin-top: 0;
+    color: blue;
+    font-size: clamp(1.2rem, 2vw, 1.7rem);
+    margin-bottom: 5px;
+    text-shadow: 0 0 10px rgba(118, 94, 255, 0.8);
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+}
+
+.visit p,
+.connect p,
+.stay-connected p {
+    font-size: 0.9rem; /* Adjust text size */
+    font-size: clamp(0.85rem, 1.7vw, 1.2rem);
+    line-height: 1.4;
+    margin-bottom: 0.5em;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 300;
+    display: block;
+}
+
+.connect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.visit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stay-connected {
+    text-align: center;
+    flex-grow: 1;
+    white-space: normal;
+}
+
+.stay-connected p {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 1rem; /* Adjust margin */
+    font-size: clamp(0.85rem, 1.7vw, 1.2rem);
+    letter-spacing: 1px;
+    line-height: 1.2; /* Adjust line height */
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 300;
+}
+
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    padding-top: 20px;
+    border-top: 1px solid #222;
+    font-size: 0.9em; /* Adjust font size */
+}
+
+.copyright {
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
+.social-icons {
+    text-align: center;
+}
+
+.social-icons a {
+    color: #007bff;
+    font-size: clamp(1.8rem, 7vw, 2.5rem);
+    margin-left: 10px; 
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    opacity: 0.6;
+}
+
+.copyright {
+    font-size: clamp(0.8rem, 2vw, 1.2rem);
+}
+
+/* media for footer*/
+/* Mobile Styles (max-width: 769px) */
+@media only screen and (max-width: 767px) {
+    .footer-top {
+        flex-direction: column; /* Stack logo and info */
+        align-items: center; /* Center items */
+        text-align: center;
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+
+
+
+    .footer-info {
+        flex-direction: column; /* Stack info sections */
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .visit,
+    .connect,
+    .stay-connected {
+        min-width: auto; /* Allow full width */
+        width: 90%; /* Take up most of the width */
+    }
+
+    .visit h4,
+    .connect h4,
+    .stay-connected h4 {
+        margin-bottom: 4px;
+    }
+
+    .visit p,
+    .connect p,
+    .stay-connected p {
+        line-height: 2;
+    }
+
+    .footer-bottom {
+        font-size: 0.8em;
+        padding-top: 1rem;
+    }
+
+    .social-icons a {
+        font-size: 2em;
+        margin-left: 8px;
+    }
+}
+
+/* Tablet Styles (min-width: 770px and max-width: 1023px) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .footer-top {
+        align-items: center; /* Center items */
+        text-align: center;
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+
+
+    .footer-info { 
+        align-items: center;
+        text-align: center;
+    }
+
+    .visit,
+    .connect,
+    .stay-connected {
+        width: 90%; /* Take up most of the width */
+    }
+
+    .visit h4,
+    .connect h4,
+    .stay-connected h4 {
+        margin-bottom: 4px;
+    }
+
+    .visit p,
+    .connect p,
+    .stay-connected p {
+        line-height: 2;
+    }
+
+    .footer-bottom {
+        font-size: 0.8em;
+        padding-top: 1rem;
+    }
+
+
+    .social-icons a {
+        margin-left: 8px;
+    }
+
+}
+
+/*laptop*/
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+    .footer-logo {
+        font-size: 5rem; /* Smaller logo */
+        padding: 2rem;
+        margin-left: 0; 
+    }
+
+    .visit,
+    .connect,
+    .stay-connected {
+        width: 150px; /* Take up most of the width */
+    }
+
+    .visit h4,
+    .connect h4,
+    .stay-connected h4 {
+    margin-bottom: 5px;
+    }
+
+    .visit p,
+    .connect p,
+    .stay-connected p {
+    margin-bottom: 0.5em;
+    }
+
+    .footer-bottom {
+    font-size: 0.9em; /* Adjust font size */
+    padding-top: 20px;
+    }
+
+
+    .social-icons a {
+    font-size: 1.5em; /* Adjust icon size */
+    margin-left: 10px; /* Adjust icon spacing */
+    }
+
+}

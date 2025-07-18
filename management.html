@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="management.css">
+    <link rel="icon" href="rclogo.png" type="image/png">
+
+    <title>RC REIGN</title>
+</head>
+<body>
+            <header>
+        <div class="header-container">
+
+            <div class="logo">
+                <a href="index.html">
+                    <img src="rclogo.png" alt="Logo">
+                </a>
+            </div>
+              <div class="hamburger-menu" onclick="toggleMobileMenu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </div>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="management.html">Management</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="apply-button">
+                <a href="https://forms.gle/hG26NouR9AesYjX97">Apply Now!</a>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="mobile-nav" id="mobileNav">
+    <ul>
+        <li><a href="about.html" onclick="closeMobileMenu()">About</a></li>
+        <li><a href="services.html" onclick="closeMobileMenu()">Services</a></li>
+        <li><a href="management.html" onclick="closeMobileMenu()">Management</a></li>
+        <li><a href="contact.html" onclick="closeMobileMenu()">Contact</a></li>
+    </ul>
+    <div class="apply-button-mobile">
+        <a href="#apply" onclick="closeMobileMenu()">Apply Now!</a>
+    </div>
+</div>
+
+      <section class="management">
+        <div class="management-container">
+            <div class="management-head">
+                <h1 class="managementtext">MANAGEMENT</h1>
+            </div>
+      </section>
+
+            <section class="ceo">
+        <div class="ceoimg-glass">
+            <img src="owner.png" alt="CEO Image">
+          </div>
+          <div class="ceotext">
+            <div class="ceoname">Cielo Amor D. Chavez</div>
+            <div class="ceotitle">Founder & CEO</div>
+            <div class="ceodes">
+              A graduate of Bachelor of Science in Business Administration, major in Management, Cielo is the dynamic President and CEO of RCreign Manpower Agency, a <strong>trusted Philippine-based manpower agency</strong> operating for over 11 years. With a mission to provide meaningful job opportunities for Filipinos, she is committed to <strong>empowering individuals</strong> to become self-sufficient and active contributors to their communities.
+              <br><br>
+              With over 15 years of experience in international recruitment, she has held key leadership roles including General Manager, Operations Manager, and Processing Manager <strong>across various reputable agencies in the Philippines.</strong> Her extensive background and proven leadership have made her a respected figure in the industry.
+              <br><br>
+              Her expertise spans business management, strategic planning, policy formulation, budget oversight, and human resource development. She identifies <strong>growth opportunities</strong>, manages organizational operations, motivates teams, and ensures smooth administrative and public functions.
+            </div>
+          </div>
+      </section>
+
+            <section class="team">
+        <div class="team-head">
+          <div class="team-head-text">
+            <h1 class="meetclienttext">MEET<span class="teamtext">THE</span>TEAM</h1>
+          </div>
+        </div>
+      </section>
+
+            <!-- Team Section Part 1 -->
+      <section class="cards-1-4">
+        <div class="cards-1-4-wrapper">
+          <div class="team1card card-animate" data-description="Holds a senior leadership role, assisting the CEO in strategic planning, overseeing daily operations, and driving the company's growth and profitability.">
+            <img src="rod.png" alt="Team Member 1">
+            <div class="teamname">Rod G. Yacub</div>
+            <div class="teamtitle">Executive VP</div>
+          </div>
+    
+          <div class="team2card card-animate" data-description="Responsible for managing the agency's human resources functions, including recruitment, employee relations, payroll, and ensuring smooth administrative operations.">
+            <img src="maa.png" alt="Team Member 2">
+            <div class="teamname">Johanna Dellosa</div>
+            <div class="teamtitle">HR & Admin Manager</div>
+          </div>
+    
+          <div class="team3card card-animate" data-description="Focuses on expanding the agency's business, identifying new clients and opportunities, developing strategic partnerships, and increasing revenue.">
+            <img src="gladys.png" alt="Team Member 3">
+            <div class="teamname">Suresh Shetty</div>
+            <div class="teamtitle">Business Dev't Head</div>
+          </div>
+    
+          <div class="team4card card-animate" data-description="Manages the financial operations of the agency, including budgeting, financial reporting, accounting, and ensuring financial compliance.">
+            <img src="gladys.png" alt="Team Member 4">
+            <div class="teamname">Gladys Guevarra</div>
+            <div class="teamtitle">Finance Manager</div>
+          </div>
+       </div>
+      </section>
+
+      <!-- Team Section Part 2 -->
+<section class="cards-5-8">
+  <div class="cards-5-8-wrapper">
+    <div class="team5card card-animate" data-description="Oversees the day-to-day operations of the agency, ensuring efficient service delivery, managing staff, and optimizing processes.">
+      <img src="da.png" alt="Team Member 5">
+      <div class="teamname">Raymond Dellosa</div>
+      <div class="teamtitle">Operations Manager</div>
+    </div>
+
+    <!-- Now shows Team 9 info -->
+    <div class="team6card card-animate" data-description="Similar to Margarita Dongsal, Christopher is involved in talent acquisition, finding suitable candidates, and facilitating the recruitment process.">
+      <img src="toph.png" alt="Team Member 6">
+      <div class="teamname">Christopher Santos</div>
+      <div class="teamtitle">Talent Acquisition</div>
+    </div>
+
+    <!-- Now shows Team 10 info -->
+    <div class="team7card card-animate" data-description="Assists the Operations Manager in supervising daily operations, coordinating staff, and ensuring smooth workflow within the team.">
+      <img src="vin.png" alt="Team Member 7">
+      <div class="teamname">Arlvince Villaflores</div>
+      <div class="teamtitle">Operations Supervisor</div>
+    </div>
+
+    <div class="team8card card-animate" data-description="Focuses on recruiting and sourcing qualified candidates for the agency's clients, conducting interviews, and managing the hiring process.">
+      <img src="mark.png" alt="Team Member 8">
+      <div class="teamnamemark">Mark Alvin Española</div>
+      <div class="teamtitle">Management Information Systems</div>
+    </div>
+  </div>
+</section>
+
+
+</section>
+
+<!-- Popup Modal -->
+<div class="card-popup" id="teamCardPopup">
+  <div class="card-popup-content">
+    <span class="card-close" onclick="closePopup()">&times;</span>
+    <p id="popupDescription"></p> <!-- Only Description -->
+  </div>
+</div>
+
+        <section class="career">
+            <div class="career-container">
+                <div class="careerhead ">
+                    <h1 class="jtt">JOIN THE TEAM</h1>
+                    <p class="careerdes">Build your career with <span class="bluecdes">RC REIGN MANPOWER AGENCY</span>, a company dedicated to providing excellent recruitment solutions and fostering strong partnerships.</p>
+                </div>
+            </section>
+
+<section id="apply" class="jobform">
+  <div class="jobform-container">
+    <h2>Job Application Format</h2>
+    <p>Submit your details and resume below. You will be redirected to our secure application portal.</p>
+
+    <div class="form-group">
+      <a href="https://forms.gle/hG26NouR9AesYjX97" target="_blank" class="submit-button">
+        Apply Now Via Our Application Portal
+      </a>
+      <p class="note">You will be securely redirected to Google Forms to complete your application, including resume upload.</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+    <footer>
+    <div class="footer-top">
+        <div class="footer-logo">
+            <h1 class="RCtext">RC<span class="Reigntext">REIGN</span></h1>
+        </div>
+        <div class="footer-info">
+            <div class="visit">
+                <h4>Visit</h4>
+                <p>RC Reign Manpower Agency</p>
+                <p>#287 P. Tuazon St. cor. 18th Ave., Cubao, Quezon City</p>
+            </div>
+            <div class="connect">
+                <h4>Connect</h4>
+                <p>Phone: +632-89216679</p>
+                <p>Email: cac.rcreign@gmail.com</p>
+            </div>
+            <div class="stay-connected">
+                <h4>Stay Connected</h4>
+                <p>Subscribe to our newsletter to receive the latest job openings, industry news, and agency updates.</p>
+                </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="copyright">
+            <p>© 2025 RC Reign Manpower Agency</p>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=100063755031563" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+</footer>
+    
+
+<script>
+        // JavaScript for refresh everytime// 
+  document.querySelectorAll('header a, .mobile-nav a').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault(); // stop default navigation
+      window.location.href = this.href; // force a full page reload
+    });
+  });
+
+  // Optional: Reset scroll position to top on load
+  window.onload = () => {
+    window.scrollTo(0, 0);
+  };
+
+
+              // JavaScript for mobile menu toggle or hamburger menu
+const mobileNav = document.getElementById('mobileNav');
+const hamburgerMenu = document.querySelector('.hamburger-menu'); // Get the hamburger menu element
+
+function toggleMobileMenu(menu) {
+    mobileNav.style.display = mobileNav.style.display === 'block' ? 'none' : 'block';
+    menu.classList.toggle('open');
+}
+
+function closeMobileMenu() {
+    mobileNav.style.display = 'none'; // Hide the mobile navigation
+    hamburgerMenu.classList.remove('open'); // Change the 'X' back to hamburger
+}
+
+/////
+  const popup = document.getElementById('teamCardPopup');
+  const popupContent = popup.querySelector('.card-popup-content');
+  const popupDescription = document.getElementById('popupDescription');
+
+  document.querySelectorAll(
+    '.team1card, .team2card, .team3card, .team4card, .team5card, .team6card, .team7card, .team8card, .team9card, .team10card'
+  ).forEach(card => {
+    card.addEventListener('click', () => {
+      popupDescription.textContent = card.dataset.description;
+      popup.classList.add('show');
+      popup.classList.remove('hide');
+      popup.style.display = 'flex';
+    });
+  });
+
+  function closePopup() {
+    popup.classList.remove('show');
+    popup.classList.add('hide');
+    setTimeout(() => {
+      popup.style.display = 'none';
+    }, 300); // Match with CSS transition time
+  }
+
+  document.addEventListener('keydown', function (event) {
+    if (popup.style.display === 'flex' && (event.key === 'Escape' || event.code === 'Space')) {
+      closePopup();
+    }
+  });
+
+    // Scroll Animation Logic
+    const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('card-visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.card-animate').forEach(card => {
+    observer.observe(card);
+  });
+
+    // Scroll to anchor only after the page has fully loaded
+  window.addEventListener('load', function () {
+    const hash = window.location.hash;
+    if (hash) {
+      const target = document.querySelector(hash);
+      if (target) {
+        setTimeout(() => {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }, 100); // Delay helps in case elements load slowly
+      }
+    }
+  });
+</script>
+</body>
+</html>

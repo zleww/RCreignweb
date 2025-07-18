@@ -1,0 +1,906 @@
+.management {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    padding: 20px;
+    padding-top: 20.8rem;
+}
+
+.management-container {
+    text-align: center; /* Center the header and description */
+    padding: 10px; /* Add some padding around the section */
+    margin-bottom: 5rem;
+}
+
+.managementtext {
+    margin-bottom: 2rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+    color: white;
+}
+
+.ceo {
+  display: flex;
+  justify-content: center;
+  gap: 5rem; /* 👈 This is where you can adjust the gap */
+  padding: 4rem 2rem;
+  color: white;
+  flex-wrap: wrap;
+  background-color: #131331;
+
+}
+
+.ceoimg-glass img {
+height: clamp(400px, 50vw, 600px);
+width: auto;
+  margin-top: 2em;
+}
+
+.ceoimg-glass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.103);
+  overflow: hidden;
+  padding: 0.1rem;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgb(0, 0, 0);
+
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.ceoimg-glass {
+  animation: slideInLeft 1.2s ease-out forwards;
+  opacity: 0; /* ensures the image is initially hidden until animation runs */
+}
+
+
+.ceotext {
+  max-width: 700px;
+}
+
+.ceoname,
+.ceotitle {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: clamp(2rem, 2vw, 4rem);
+  margin-bottom: 0.5rem;
+}
+
+.ceotitle {
+  font-size: clamp(2rem, 2vw, 3rem);
+  margin-bottom: 1.5rem;
+}
+
+.ceodes {
+  font-family: "Quicksand", sans-serif;
+  font-size: clamp(1rem, 1vw, 1.3rem);
+  line-height: 2;
+}
+
+.ceodes strong {
+  font-weight: bold;
+}
+
+/*MANAGEMENT MEDIA QUERIES*/
+@media only screen and (min-width: 768px) and (max-width: 1023px) { 
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  .ceoimg-glass {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.103);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+
+  }
+
+  .ceoimg-glass img {
+
+    border-radius: 12px;
+    object-fit: cover;
+  }
+
+  .ceo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    flex-wrap: nowrap;         /* Prevent wrapping */
+    padding: 4rem 2rem 6px;
+    background-color: #131331;
+    color: white;
+    text-align: left;
+  }
+
+  .ceoimg-glass {
+    flex-shrink: 0;
+  }
+
+  .ceotext {
+    max-width: 700px;
+    flex: 1;
+  }
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 40000px) {
+  .ceoimg-glass {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.103);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+
+  }
+
+  .ceoimg-glass img {
+
+    border-radius: 12px;
+    object-fit: cover;
+  }
+
+  .ceo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    flex-wrap: nowrap;         /* Prevent wrapping */
+    padding: 4rem 2rem 6px;
+    background-color: #131331;
+    color: white;
+    text-align: left;
+    }
+
+  .ceoimg-glass {
+    flex-shrink: 0;
+  }
+
+  .ceotext {
+    max-width: 700px;
+    flex: 1;
+  }
+    }
+
+
+/* TEAM SECTION */
+
+.team {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    padding: 20px;
+    padding-top: 20.8rem;
+}
+
+.team-head {
+    text-align: center; /* Center the header and description */
+    padding: 0px; /* Add some padding around the section */
+    margin-bottom: 5rem;
+}
+
+.team-head-text {
+  text-align: center;
+}
+
+.meetclienttext {
+    margin-top: -15rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+    color: white;
+}
+
+.teamtext {
+  color: #0400ff; 
+  margin: 0 0.5rem;
+}
+
+/* TEAM CARDS 1-4 */
+.cards-1-4 {
+  padding: 4rem 2rem;
+  margin-top: -10rem;
+  display: flex;
+  justify-content: center;
+}
+
+.cards-1-4-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.team1card,
+.team2card,
+.team3card,
+.team4card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 2rem;
+  text-align: center;
+  width: 90%;
+  max-width: 300px;
+  height: 400px;
+  color: white;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.05);
+}
+
+.team1card:hover,
+.team2card:hover,
+.team3card:hover,
+.team4card:hover {
+  box-shadow: 0 0 15px #00bfff;
+}
+
+
+.team1card.card-animate img,
+.team2card.card-animate img,
+.team3card.card-animate img,
+.team4card.card-animate img {
+  width: 250px;
+  height: 400px;
+  border-radius: 12px;
+  align-self: center;
+  margin-bottom: 1rem;
+}
+
+.teamname {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(1.5rem, 1.5vw, 2.5rem);
+  font-weight: 600;
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+  max-width: 900px;
+}
+
+.teamtitle {
+  font-family: "Quicksand", sans-serif;
+  font-size: clamp(1.3rem, 1.5vw, 2rem);
+  opacity: 0.9;
+}
+
+/* TEAM CARDS 1-4 MEDIA QUERIES */
+@media only screen and (min-width: 768px) and (max-width: 1023px) { 
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  .cards-1-4 {
+  padding: 4rem 2rem;
+  margin-top: -10rem;
+  display: flex;
+  justify-content: center;
+  }
+
+  .cards-1-4-wrapper {
+  display: flex;
+  flex-direction: row;         /* ⬅ changed from column */
+  gap: 6rem;
+  flex-wrap: wrap;             /* ⬅ allows wrap on smaller screens */
+  justify-content: center;     /* ⬅ centers the cards horizontally */
+  width: 100%;
+  max-width: 1200px;
+  }
+
+    .team1card,
+    .team2card,
+    .team3card,
+    .team4card {
+    width: 400px;
+    max-width: 300px;
+    height: 420px;  
+    }
+
+.team1card.card-animate img,
+.team2card.card-animate img,
+.team3card.card-animate img,
+.team4card.card-animate img {
+  width: 250px;
+  height: 450px;
+  border-radius: 12px;
+  align-self: center;
+  margin-bottom: 1rem;
+}
+
+.teamname {
+  margin-top: 5rem;
+  margin-bottom: 0.5rem;
+  max-width: 900px;
+
+}
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 40000px) {
+  .cards-1-4 {
+  padding: 4rem 2rem;
+  margin-top: -10rem;
+  display: flex;
+  justify-content: center;
+  }
+
+  .cards-1-4-wrapper {
+  display: flex;
+  flex-direction: row;         /* ⬅ changed from column */
+  gap: 3rem;
+  flex-wrap: wrap;             /* ⬅ allows wrap on smaller screens */
+  justify-content: center;     /* ⬅ centers the cards horizontally */
+  width: 100%;
+  max-width: 2000px;
+
+  }
+
+    .team1card,
+    .team2card,
+    .team3card,
+    .team4card {
+  width: 300px;
+  max-width: 300px;
+  height: 600px;
+    }
+
+.team1card.card-animate img,
+.team2card.card-animate img,
+.team3card.card-animate img,
+.team4card.card-animate img {
+  width: 300px;
+  height: auto;
+  border-radius: 12px;
+  align-self: center;
+  margin-bottom: 1rem
+}
+
+.team2card.card-animate img {
+  margin-bottom: 2rem;
+}
+
+.teamname {
+  margin-bottom: 0.5rem;
+  max-width: 900px;
+
+}
+}
+
+
+/* TEAM CARDS 5-8 */
+.cards-5-8 {
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.cards-5-8-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.team5card,
+.team6card,
+.team7card,
+.team8card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 2rem;
+  text-align: center;
+  width: 90%;
+  max-width: 300px;
+  height: 400px;
+  color: white;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.05);
+}
+
+.team5card:hover,
+.team6card:hover,
+.team7card:hover,
+.team8card:hover {
+  box-shadow: 0 0 15px #00bfff;
+}
+
+.team5card.card-animate img,
+.team6card.card-animate img,
+.team7card.card-animate img,
+.team8card.card-animate img {
+  width: 250px;
+  height: 400px;
+  border-radius: 12px;
+  align-self: center;
+  margin-bottom: 1rem;
+}
+
+.teamname {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(1.5rem, 1.5vw, 2.5rem);
+  font-weight: 600;
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+  max-width: 900px;
+}
+
+.teamtitle {
+  font-family: "Quicksand", sans-serif;
+  font-size: clamp(1.3rem, 1.5vw, 2rem);
+  opacity: 0.9;
+}
+
+/* TEAM CARDS 5-8 MEDIA QUERIES */
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  .cards-5-8 {
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cards-5-8-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 6rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  .team5card,
+  .team6card,
+  .team7card,
+  .team8card {
+    width: 400px;
+    max-width: 300px;
+    height: 420px;
+  }
+
+.team5card.card-animate img,
+.team6card.card-animate img,
+.team7card.card-animate img,
+.team8card.card-animate img {
+  width: 250px;
+  height: 450px;
+  border-radius: 12px;
+  align-self: center;
+  margin-bottom: 1rem;
+}
+
+  .teamname {
+    margin-top: 5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 40000px) {
+  .cards-5-8 {
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cards-5-8-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 2000px;
+  }
+
+  .team5card,
+  .team6card,
+  .team7card,
+  .team8card {
+    width: 300px;
+    max-width: 300px;
+    height: 600px;
+  }
+
+.team5card.card-animate img,
+.team6card.card-animate img,
+.team7card.card-animate img,
+.team8card.card-animate img {
+  width: 300px;
+  height: auto;
+  border-radius: 12px;
+  align-self: center;
+  margin-bottom: 1rem
+}
+
+  .teamname {
+    margin-top: 9rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* TEAM CARDS 9-12 */
+/* TEAM CARDS 9-10 */
+.cards-9-10 {
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.cards-9-10-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.team9card,
+.team10card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 2rem;
+  text-align: center;
+  width: 90%;
+  max-width: 300px;
+  height: 400px;
+  color: white;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.05);
+}
+
+.team9card:hover,
+.team10card:hover {
+  box-shadow: 0 0 15px #00bfff;
+}
+
+.team9card.card-animate img,
+.team10card.card-animate img {
+  width: 250px;
+  height: 400px;
+  border-radius: 12px;
+  align-self: center;
+  margin-bottom: 1rem;
+}
+
+/* Custom name class support (optional) */
+.teamnamemark,
+.teamnamejoana {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(1.5rem, 1.5vw, 2.5rem);
+  font-weight: 600;
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+  max-width: 900px;
+}
+
+.teamtitle {
+  font-family: "Quicksand", sans-serif;
+  font-size: clamp(1.3rem, 1.5vw, 2rem);
+  opacity: 0.9;
+}
+
+/* TEAM CARDS 9-10 MEDIA QUERIES */
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  .cards-9-10 {
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cards-9-10-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 6rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  .team9card,
+  .team10card {
+    width: 400px;
+    max-width: 300px;
+    height: 420px;
+  }
+
+.team9card.card-animate img,
+.team10card.card-animate img{
+  width: 250px;
+  height: 450px;
+  border-radius: 12px;
+  align-self: center;
+  margin-bottom: 1rem;
+}
+
+  .teamnamemark,
+  .teamnamejoana {
+    margin-top: 5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 40000px) {
+  .cards-9-10 {
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cards-9-10-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 2000px;
+  }
+
+  .team9card,
+  .team10card {
+    width: 300px;
+    max-width: 300px;
+    height: 600px;
+  }
+
+.team9card.card-animate img,
+.team10card.card-animate img {
+  width: 300px;
+  height: auto;
+  border-radius: 12px;
+  align-self: center;
+  margin-bottom: 1rem
+}
+
+  .teamnamemark,
+  .teamnamejoana {
+    margin-top: 9rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Popup (shared) */
+.card-popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.card-popup-content {
+  background: rgba(0, 38, 255, 0.15);
+  box-shadow: 0 0 20px rgba(0, 38, 255, 0.5);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 2rem;
+  color: white;
+  max-width: 700px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.card-close {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.card-animate {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.card-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Popup animation */
+.card-popup-content {
+  transform: scale(0.8);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.card-popup.show .card-popup-content {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.card-popup.hide .card-popup-content {
+  transform: scale(0.8);
+  opacity: 0;
+}
+
+
+/* JOIN THE TEAM SECTION */
+
+.career {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  margin: 5rem;
+}
+
+.jtt {
+    font-size: clamp(2.2rem, 7vw, 7rem);
+    margin-bottom: 10px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 300;
+}
+
+.careerdes {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 200;
+  font-size: clamp(1rem, 2vw, 2rem);
+  line-height: clamp(1.6rem, 1.8vw, 3.6rem);
+  margin: 0 auto; /* Center the description */
+  margin-top: 3rem;
+  max-width: 90%; /* Limit the width on mobile */
+}
+
+.bluecdes {
+  color: #0400ff;
+    font-weight: bold;
+}
+
+/* JOIN THE TEAM MEDIA QUERIES */
+@media only screen and (min-width: 768px) and (max-width: 1023px) { 
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+.careerdes {
+  max-width: 70%; /* Limit the width on mobile */
+}
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 40000px) {
+.careerdes {
+  max-width: 70%; /* Limit the width on mobile */
+}
+}
+
+/*JOB FORM*/
+
+.jobform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem; 
+  margin-top: -5rem;
+}
+
+.jobform-container {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 0 10px rgba(0, 38, 255, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  color: white;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+
+.jobform-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.jobform-container p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  opacity: 0.8;
+  color: #ccc;
+
+}
+
+/* Form styles */
+.application-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Grouped input pairs */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Inputs */
+.application-form input[type="text"],
+.application-form input[type="email"],
+.application-form input[type="tel"],
+.application-form input[type="file"] {
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  font-family: inherit;
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.application-form input:focus {
+  border-color: #0400ff;
+}
+
+/* File label */
+.file-label {
+  text-align: left;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+/* Submit button */
+  .submit-button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px 30px;
+    background-color: #007bff; /* Original blue color */
+    color: white;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease; /* Smooth transition for the hover effect */
+  }
+
+  /* Hover effect: darken the background color */
+  .submit-button:hover {
+    background-color: #0056b3; /* A darker shade of blue */
+  }
