@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="hiring.css">
+    <link rel="icon" href="rclogo.png" type="image/png">
+
+
+    <title>RC REIGN</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+
+            <div class="logo">
+                <a href="index.html">
+                    <img src="rclogo.png" alt="Logo">
+                </a>
+            </div>
+              <div class="hamburger-menu" onclick="toggleMobileMenu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </div>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="hiring.html">Job Hiring</a></li>
+                    <li><a href="management.html">Management</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="apply-button">
+                <a href="https://forms.gle/hG26NouR9AesYjX97">Apply Now!</a>
+            </div>
+
+        </div>
+    </header>
+
+<div id="job-modal" class="modal-overlay" style="display: none;">
+
+  <div class="modal-content">
+    <button class="modal-close">&times;</button>
+    <h2 id="modal-job-title">Job Title</h2>
+    <p id="modal-job-description">Job short description goes here.</p>
+
+     <div id="modal-job-description"></div> 
+
+<div class="apply-now-btn">
+  <a href="https://forms.gle/hG26NouR9AesYjX97" target="_blank" id="modal-apply-link">
+    Apply Now!
+  </a>
+</div>
+
+  </div>
+
+</div>
+
+        <div class="mobile-nav" id="mobileNav">
+    <ul>
+        <li><a href="about.html" onclick="closeMobileMenu()">About</a></li>
+        <li><a href="services.html" onclick="closeMobileMenu()">Services</a></li>
+        <li><a href="management.html" onclick="closeMobileMenu()">Management</a></li>
+        <li><a href="contact.html" onclick="closeMobileMenu()">Contact</a></li>
+        <li><a href="hiring.html" onclick="closeMobileMenu()">Job Hiring</a></li>
+
+    </ul>
+    <div class="apply-button-mobile">
+        <a href="management.html#apply" onclick="closeMobileMenu()">Apply Now!</a>
+    </div>
+</div>
+
+<section class="hiring">
+    <div class="hiringhead">
+      <h1 class="hiringmaintext">JOBS <span class="hiringtext">WE </span>OFFER</h1>
+    </div>
+    <p class="hiringdes">Apply in what suits you best.</p>
+</section>
+
+<section class="job-listings">
+    <div class="job-listings-container">
+        <h2>Job Listings</h2>
+        <p>Explore our current job openings and find the perfect fit for you.</p>
+    </div>
+
+    <div class="job-cards-wrapper">
+        <a class="job-card">
+            <div>Intelegencia</div>
+        </a>
+
+        <a class="job-card">
+            <div>Pinnacle Intelligence</div>
+        </a>
+
+        <a class="job-card">
+            <div>Elixir Pharma</div>
+        </a>
+
+        <a class="job-card">
+            <div>Logistics</div>
+        </a>
+
+        <a class="job-card">
+            <div>Elthora</div>
+        </a>
+
+        <a class="job-card">
+            <div>VTSL</div>
+        </a>
+
+        <a class="job-card">
+            <div>Sales & Marketing</div>
+        </a>
+    </div>
+</section>
+
+
+
+                <footer>
+    <div class="footer-top">
+        <div class="footer-logo">
+            <h1 class="RCtext">RC<span class="Reigntext">REIGN</span></h1>
+        </div>
+        <div class="footer-info">
+            <div class="visit">
+                <h4>Visit</h4>
+                <p>RC Reign Manpower Agency</p>
+                <p>#287 P. Tuazon St. cor. 18th Ave., Cubao, Quezon City</p>
+            </div>
+            <div class="connect">
+                <h4>Connect</h4>
+                <p>Phone: +632-89216679</p>
+                <p>Email: cac.rcreign@gmail.com</p>
+            </div>
+            <div class="stay-connected">
+                <h4>Stay Connected</h4>
+                <p>Subscribe to our newsletter to receive the latest job openings, industry news, and agency updates.</p>
+                </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="copyright">
+            <p>© 2025 RC Reign Manpower Agency</p>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=100063755031563" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        // JavaScript for refresh everytime// 
+  document.querySelectorAll('header a, .mobile-nav a').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault(); // stop default navigation
+      window.location.href = this.href; // force a full page reload
+    });
+  });
+
+  // Optional: Reset scroll position to top on load
+  window.onload = () => {
+    window.scrollTo(0, 0);
+  };
+
+      // JavaScript for mobile menu toggle or hamburger menu
+const mobileNav = document.getElementById('mobileNav');
+const hamburgerMenu = document.querySelector('.hamburger-menu'); // Get the hamburger menu element
+
+function toggleMobileMenu(menu) {
+    mobileNav.style.display = mobileNav.style.display === 'block' ? 'none' : 'block';
+    menu.classList.toggle('open');
+}
+
+function closeMobileMenu() {
+    mobileNav.style.display = 'none'; // Hide the mobile navigation
+    hamburgerMenu.classList.remove('open'); // Change the 'X' back to hamburger
+}
+
+    //javascript for our client header and description//
+document.addEventListener('DOMContentLoaded', function() {
+    const ourClientsHeader = document.querySelector('.our-clients-header');
+    const ocdes = document.querySelector('.ocdes');
+    const ourClientHead = document.querySelector('.ourclienthead'); // Added
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('slide-in');
+                observer.unobserve(entry.target); // Stop observing after animating in
+            }
+        });
+    }, {
+        threshold: 0.2 // Trigger when 20% of the element is visible
+    });
+
+    if (ourClientsHeader) observer.observe(ourClientsHeader);
+    if (ocdes) observer.observe(ocdes);
+    if (ourClientHead) observer.observe(ourClientHead); // Observe the new element
+});
+
+// JavaScript for carousel functionality//
+    const carouselItems = document.querySelectorAll('.carousel-item');
+const categoryElement = document.getElementById('carousel-category');
+const prevButton = document.getElementById('prev-button');
+const nextButton = document.getElementById('next-button');
+const categories = [
+    "Warehouse & Logistics",
+    "Construction & Powerplants",
+    "Distribution & Manufacturing"
+];
+let currentIndex = 0;
+
+function updateCarousel() {
+    carouselItems.forEach((item, index) => {
+        item.classList.toggle('active', index === currentIndex);
+    });
+    categoryElement.textContent = categories[currentIndex];
+     updateGlassmorphism(currentIndex);
+}
+
+
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % carouselItems.length;
+    updateCarousel();
+}
+
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+    updateCarousel();
+}
+
+function updateGlassmorphism(index) {
+    const activeItems = carouselItems[index].querySelectorAll('.client-container');
+
+     // Define different glassmorphism styles for each slide
+    let bg, boxShadow, blur, borderColor;
+    switch (index) {
+        case 0:
+            bg = 'rgba(234, 234, 234, 0.1)';
+            boxShadow = '0 8px 32px 0 rgba(31, 38, 135, 0.37)';
+            blur = '5px';
+            borderColor = 'rgba(255, 255, 255, 0.18)';
+            break;
+        case 1:
+            bg = 'rgba(234, 234, 234, 0.1)';
+            boxShadow = '0 8px 32px 0 rgba(31, 38, 135, 0.37)';
+            blur = '5px';
+            borderColor = 'rgba(255, 255, 255, 0.18)';
+            break;
+        case 2:
+            bg = 'rgba(234, 234, 234, 0.1)';
+            boxShadow = '0 8px 32px 0 rgba(31, 38, 135, 0.37)';
+            blur = '5px';
+            borderColor = 'rgba(255, 255, 255, 0.18)';
+            break;
+        default:
+            bg = 'rgba(234, 234, 234, 0.1)';
+            boxShadow = '0 8px 32px 0 rgba(31, 38, 135, 0.37)';
+            blur = '5px';
+            borderColor = 'rgba(255, 255, 255, 0.18)';
+            break;
+    }
+    activeItems.forEach(item => {
+        item.style.backgroundColor = bg;
+        item.style.boxShadow = boxShadow;
+        item.style.backdropFilter = blur;
+        item.style.webkitBackdropFilter = blur;
+        item.style.borderColor = borderColor;
+    });
+
+}
+
+prevButton.addEventListener('click', prevSlide);
+nextButton.addEventListener('click', nextSlide);
+
+// Initial update
+updateCarousel();
+
+    </script>
+
+    <script>
+  // Job data (titles, descriptions, and apply links)
+const jobs = {
+  "Intelegencia": {
+    applyLink: "https://forms.gle/hG26NouR9AesYjX97",
+    description: `
+      <h3>📌 Regular Employment</h3>
+      <ul class="job-list">
+        <li>
+          <strong>Data Analyst</strong><br>
+          Analyze data trends and produce reports.<br>
+          <em>Qualification:</em> Bachelor's in Statistics or related<br>
+          <em>Salary:</em> ₱35,000/month
+        </li>
+        <li>
+          <strong>Customer Support Representative</strong><br>
+          Handle inbound customer queries.<br>
+          <em>Qualification:</em> Fluent in English<br>
+          <em>Salary:</em> ₱25,000/month
+        </li>
+        <!-- Add 8 more jobs here the same way -->
+      </ul>
+
+      <h3>🛠️ Project-Based Employment</h3>
+      <ul class="job-list">
+        <li>
+          <strong>UX Designer (3-month contract)</strong><br>
+          Design user interfaces for the new client portal.<br>
+          <em>Qualification:</em> Experience with Figma<br>
+          <em>Salary:</em> ₱45,000/project
+        </li>
+        <li>
+          <strong>Marketing Copywriter</strong><br>
+          Write SEO-driven content for campaigns.<br>
+          <em>Qualification:</em> 1+ year experience<br>
+          <em>Salary:</em> ₱18,000/project
+        </li>
+      </ul>
+        `
+  },
+    "Pinnacle Intelligence": {
+      description: "Short description for Pinnacle Intelligence job opening.",
+      applyLink: "https://forms.gle/hG26NouR9AesYjX97"
+    },
+    "Elixir Pharma": {
+      description: "Short description for Elixir Pharma job opening.",
+      applyLink: "https://forms.gle/hG26NouR9AesYjX97"
+    },
+    "Logistics": {
+      description: "Short description for Logistics job opening.",
+      applyLink: "https://forms.gle/hG26NouR9AesYjX97"
+    },
+    "Elthora": {
+      description: "Short description for Elthora job opening.",
+      applyLink: "https://forms.gle/hG26NouR9AesYjX97"
+    },
+    "VTSL": {
+      description: "Short description for VTSL job opening.",
+      applyLink: "https://forms.gle/hG26NouR9AesYjX97"
+    },
+    "Sales & Marketing": {
+      description: "Short description for Sales & Marketing job opening.",
+      applyLink: "https://forms.gle/hG26NouR9AesYjX97"
+    }
+  };
+
+  const modal = document.getElementById('job-modal');
+  const modalTitle = document.getElementById('modal-job-title');
+  const modalDescription = document.getElementById('modal-job-description');
+  const modalApplyLink = document.getElementById('modal-apply-link');
+  const closeBtn = document.querySelector('.modal-close');
+
+  // Open modal function
+  function openModal(jobName) {
+    const job = jobs[jobName];
+    if (!job) return;
+
+    modalTitle.textContent = jobName;
+    modalDescription.textContent = job.description;
+    modalApplyLink.href = job.applyLink;
+
+    modal.style.display = 'flex';
+  }
+
+  // Close modal function
+  function closeModal() {
+    modal.style.display = 'none';
+  }
+
+  // Close on clicking close button
+  closeBtn.addEventListener('click', closeModal);
+
+  // Close modal if clicking outside modal content
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  // Add click listeners to job cards
+  document.querySelectorAll('.job-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const jobName = card.textContent.trim();
+      openModal(jobName);
+    });
+  });
+</script>
+
+</body>
+</html>

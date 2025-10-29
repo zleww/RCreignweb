@@ -1,0 +1,274 @@
+.hiring
+{
+          text-align: center; /* Center the header and description */
+          padding-top: 20rem;
+          margin-bottom: 15rem;
+}
+
+.hiringhead {
+    margin-bottom: 2rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+}
+
+.hiringmaintext {
+    font-size: clamp(2.4rem, 5vw, 7rem);
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+    color: white;
+}
+
+.hiringtext {
+    font-size: clamp(2.4rem, 5vw, 7rem);
+    color: #0400ff;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+}
+
+.hiringdes
+{
+          color: #ffffff;
+          font-size: clamp(1rem, 1.3vw, 3rem);
+          font-style: italic;
+          line-height: clamp(1.6rem, 1.8vw, 3.6rem);
+          font-family: "Quicksand", sans-serif; /* Use your preferred font */
+          font-weight: 400;
+          margin: 0 auto; /* Center the description */
+          max-width: 90%; /* Limit the width on mobile */
+}
+
+
+/* Basic reset and box sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.job-listings-container {
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+.job-listings-container h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255)
+    ;
+}
+
+.job-listings-container p {
+    font-size: 16px;
+    color: #ffffff;
+    font-style: italic;
+}
+
+/* Wrapper for all job cards */
+.job-cards-wrapper {
+    padding: 10px 20px;
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 10rem;
+    cursor: pointer;
+}
+
+/* Job card styles */
+.job-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.329); /* Semi-transparent white */
+    backdrop-filter: blur(20px); /* Blur behind the card */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    margin: 12px 0;
+    height: 80px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.job-card div {
+    width: 100%;
+}
+
+/* Hover effect */
+.job-card:hover {
+    background-color: #e8e8e8;
+    transform: scale(1.02);
+}
+
+/*SERVICES MEDIA QUERIES*/
+@media only screen and (min-width: 768px) and (max-width: 1023px) { 
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+        .job-listings-container {
+        padding: 40px;
+        text-align: center;
+    }
+
+    .job-listings-container h2 {
+        font-size: 32px;
+    }
+
+    .job-listings-container p {
+        font-size: 18px;
+        color: #dddddd; /* Optional: softer color for mid-size screens */
+    }
+
+    /* Adjust job card size and text */
+    .job-card {
+        height: 120px;
+        font-size: 20px;
+    }
+
+    .job-card div {
+        font-size: 20px;
+    }
+
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 40000px) {
+    /* Job Listings Container (title & paragraph) */
+    .job-listings-container {
+        padding: 60px;
+        max-width: 900px;
+    }
+
+    .job-listings-container h2 {
+        font-size: 36px;
+    }
+
+    .job-listings-container p {
+        font-size: 20px;
+        color: #eeeeee;
+    }
+
+    /* Job Cards Wrapper */
+    .job-cards-wrapper {
+        max-width: 900px;
+        padding: 0 40px;
+    }
+
+    /* Job Cards */
+    .job-card {
+        height: 140px;
+        font-size: 22px;
+    }
+
+    .job-card div {
+        font-size: 22px;
+    }
+
+}
+
+
+/* Modal overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Modal box */
+.modal-content {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 30px 40px;
+    width: 90%;
+    max-width: 500px;
+    color: #fff;
+    position: relative;
+    text-align: center;
+}
+
+/* Close button */
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+      max-width: 1200px;       /* wider modal for lots of content */
+  max-height: 90vh;         /* keep it within viewport height */
+  overflow-y: auto;
+}
+
+.modal-overlay {
+  overflow-y: auto;
+}
+
+.apply-now-btn {
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    font-weight: 100;
+    text-align: center;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.apply-now-btn a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+}
+
+.apply-now-btn:hover {
+    background-color: #0056b3;
+}
+
+
+
+.job-list {
+  text-align: left;
+  padding-left: 0;
+  list-style-type: none;
+  margin-top: 10px;
+}
+
+.job-list li {
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.job-list strong {
+  font-size: 1.05rem;
+  color: #fff;
+}
+
+.job-list em {
+  display: block;
+  font-style: normal;
+  color: #ccc;
+  margin-top: 5px;
+}
