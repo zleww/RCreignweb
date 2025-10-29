@@ -733,7 +733,6 @@ h1 {
     background-color: #1a1a2e; /* Example dark background */
     padding: 40px 10px; /* Generous vertical padding */
     text-align: center;
-    margin-top: -15rem;
     margin-bottom: 15rem;
 }
 
@@ -763,26 +762,26 @@ h1 {
 .submit-button {
     /* Core Button Styles based on .button a */
     display: inline-block; /* Essential for padding/sizing the anchor tag */
-    
+
     /* Responsive Padding/Font Size from your theme */
     padding: clamp(10px, 1.8vw, 20px) clamp(20px, 4vw, 40px);
     font-size: clamp(1rem, 2vw, 1.2rem);
-    
+
     /* Appearance */
     color: white;
     background-color: #4949f8; /* Use the theme's primary blue color */
-    border: 1px solid #4949f8; 
+    border: 1px solid #4949f8;
     text-decoration: none;
     font-weight: 500;
     border-radius: 3px;
     transition: 0.3s ease-in-out;
-    
+
     /* Typography based on your theme's non-heading font */
-    font-family: "Poppins", sans-serif; 
+    font-family: "Poppins", sans-serif;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 1px;
-    
+
     /* Add a slight elevation */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -791,18 +790,13 @@ h1 {
     /* Hover effect based on your theme's .button a:hover */
     background-color: #5353ff;
     color: black; /* Changed to black for contrast with the lighter hover background */
-    
+
     /* Intense blue glow effect */
-    box-shadow: 0 0 10px #5353ff, 
-                0 0 20px #5353ff, 
+    box-shadow: 0 0 10px #5353ff,
+                0 0 20px #5353ff,
                 0 0 30px #5353ff;
     transform: translateY(-2px); /* Slight lift on hover */
 }
-
-
-
-
-
         /* Footer Styles */
 
 footer {
