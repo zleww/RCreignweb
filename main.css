@@ -722,7 +722,82 @@ h1 {
 }
 
 
+/*registration*/
+/*
+|--------------------------------------------------------------------------
+| Registration Section Styles (.regsec)
+|--------------------------------------------------------------------------
+*/
 
+.regsec {
+    background-color: #1a1a2e; /* Example dark background */
+    padding: 40px 10px; /* Generous vertical padding */
+    text-align: center;
+    margin-top: -15rem;
+    margin-bottom: 15rem;
+}
+
+.regcon {
+    /* Center the content container and limit its width for readability */
+    max-width: 800px;
+    margin: 0 auto;
+    /* Optional: Add a subtle inner shadow or border for contrast */
+}
+
+.regsec h2 {
+    /* Theme: Use Josefin Sans, bold, white, and a shadow for the heading */
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bold;
+    font-size: clamp(1.8rem, 4vw, 4rem); /* Responsive font size */
+    color: white;
+    margin-bottom: 30px;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
+}
+
+.form-group {
+    /* Used to vertically center and contain the button */
+    display: flex;
+    justify-content: center;
+}
+
+.submit-button {
+    /* Core Button Styles based on .button a */
+    display: inline-block; /* Essential for padding/sizing the anchor tag */
+    
+    /* Responsive Padding/Font Size from your theme */
+    padding: clamp(10px, 1.8vw, 20px) clamp(20px, 4vw, 40px);
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    
+    /* Appearance */
+    color: white;
+    background-color: #4949f8; /* Use the theme's primary blue color */
+    border: 1px solid #4949f8; 
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 3px;
+    transition: 0.3s ease-in-out;
+    
+    /* Typography based on your theme's non-heading font */
+    font-family: "Poppins", sans-serif; 
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+    /* Add a slight elevation */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.submit-button:hover {
+    /* Hover effect based on your theme's .button a:hover */
+    background-color: #5353ff;
+    color: black; /* Changed to black for contrast with the lighter hover background */
+    
+    /* Intense blue glow effect */
+    box-shadow: 0 0 10px #5353ff, 
+                0 0 20px #5353ff, 
+                0 0 30px #5353ff;
+    transform: translateY(-2px); /* Slight lift on hover */
+}
 
 
 
